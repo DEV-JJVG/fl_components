@@ -1,4 +1,3 @@
-import 'package:fl_components/models/theme/app_theme.dart';
 import 'package:fl_components/widgets/custom_card_tipo1.dart';
 import 'package:fl_components/widgets/custom_card_tipo2.dart';
 import 'package:flutter/material.dart';

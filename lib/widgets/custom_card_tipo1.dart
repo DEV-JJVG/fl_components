@@ -10,7 +10,10 @@ class CustomCardTipo1 extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-            leading: Icon(Icons.photo_album_outlined, color: AppTheme.purple),
+            leading: Icon(
+              Icons.photo_album_outlined,
+              color: AppTheme.primaryColor,
+            ),
             title: Text('Aquí pongo el titulo'),
             subtitle: Text(
               'Pariatur quis adipisicing dolor sunt sit labore incididunt laboris sunt sint duis anim. Incididunt excepteur Lorem minim ad duis do tempor nostrud consequat enim commodo aute dolore. Mollit esse velit aliqua consequat labore nisi sit amet magna. Qui consequat amet tempor incididunt. Excepteur culpa adipisicing et est est aute excepteur esse laborum eu non nisi qui. Adipisicing aute veniam eiusmod eiusmod.',

@@ -30,6 +30,20 @@ class InputsScreen extends StatelessWidget {
               labelText: 'E-mail de registro',
               icon: Icons.email_rounded,
             ),
+            CustomTextFormFile(
+              hintText: 'Contraseña',
+              labelText: 'Contraseña del usuario',
+              icon: Icons.email_rounded,
+              obscureText: true,
+            ),
+            SizedBox(height: 25),
+            ElevatedButton(
+              onPressed: () {},
+              child: SizedBox(
+                width: double.infinity,
+                child: Center(child: Text('Enviar')),
+              ),
+            ),
           ],
         ),
       ),

@@ -1,3 +1,5 @@
+import 'dart:nativewrappers/_internal/vm/lib/ffi_native_type_patch.dart';
+
 import 'package:flutter/material.dart';
 
 class CustomTextFormFile extends StatelessWidget {
@@ -6,6 +8,7 @@ class CustomTextFormFile extends StatelessWidget {
   final String? helperText;
   final IconData? icon;
   final IconData? suffixIcon;
+  final bool obscureText;
   const CustomTextFormFile({
     Key? key,
     this.hintText,
@@ -13,6 +16,7 @@ class CustomTextFormFile extends StatelessWidget {
     this.helperText,
     this.icon,
     this.suffixIcon,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override

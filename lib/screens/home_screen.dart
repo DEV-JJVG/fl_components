@@ -10,15 +10,15 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(title: Text('Componentes en Flutter'), elevation: 50.0),
       body: ListView.separated(
         itemBuilder: (context, index) => ListTile(
-          leading: Icon(AppRoutes.menuOptions[index].icon as IconData?),
-          title: Text(AppRoutes.menuOptions[index].name),
+          leading: Icon(AppRoutes.MenuOptions[index].icon as IconData?),
+          title: Text(AppRoutes.MenuOptions[index].name),
           onTap: () {
-            Navigator.pushNamed(context, AppRoutes.menuOptions[index].route);
+            Navigator.pushNamed(context, AppRoutes.MenuOptions[index].route);
           },
         ),
 
         separatorBuilder: (context, index) => Divider(),
-        itemCount: AppRoutes.menuOptions.length,
+        itemCount: AppRoutes.MenuOptions.length,
       ),
     );
   }

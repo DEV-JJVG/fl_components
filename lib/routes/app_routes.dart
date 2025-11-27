@@ -3,49 +3,70 @@ import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
-  static const String initialRoute = 'home';
-  static final menuOptions = <MenuOption>[
+  static const initialRoute = 'home';
+
+  static final MenuOptions = <MenuOption>[
     MenuOption(
-      name: 'Home',
       route: 'home',
-      icon: 'Icons.home_outlined',
+      icon: Icons.home_max_outlined,
+      name: 'Home Screen',
       screen: const HomeScreen(),
     ),
     MenuOption(
-      name: 'ListView Tipo 1',
       route: 'listview1',
-      icon: 'assets/icons/listview1_icon.png',
+      icon: Icons.list_alt_outlined,
+      name: 'Listview tipo 1',
       screen: const Listview1Screen(),
     ),
     MenuOption(
-      name: 'ListView Tipo 2',
       route: 'listview2',
-      icon: 'assets/icons/listview2_icon.png',
+      icon: Icons.list_sharp,
+      name: 'Listview tipo 2',
       screen: const Listview2Screen(),
     ),
     MenuOption(
-      name: 'Alertas - Alerts',
       route: 'alert',
-      icon: 'assets/icons/alert_icon.png',
+      icon: Icons.add_alert_outlined,
+      name: 'Alertas',
       screen: const AlertScreen(),
     ),
     MenuOption(
-      name: 'Tarjetas - Cards',
       route: 'card',
-      icon: 'assets/icons/card_icon.png',
+      icon: Icons.card_travel_outlined,
+      name: 'Cards',
       screen: const CardScreen(),
+    ),
+    MenuOption(
+      route: 'avatar',
+      icon: Icons.supervised_user_circle_outlined,
+      name: 'Avatar',
+      screen: const AvatarScreen(),
+    ),
+    MenuOption(
+      route: 'container',
+      icon: Icons.inbox_sharp,
+      name: 'Container',
+      screen: const ContainerScreen(),
+    ),
+    MenuOption(
+      route: 'inputs',
+      icon: Icons.input_rounded,
+      name: 'Forms: Inputs',
+      screen: const InputsScreen(),
     ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
-    for (final option in menuOptions) {
+
+    for (final option in MenuOptions) {
       appRoutes.addAll({option.route: (BuildContext context) => option.screen});
     }
+
     return appRoutes;
   }
 
-  Route<dynamic> onGenerateRoute(RouteSettings settings) {
+  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     return MaterialPageRoute(builder: (context) => AlertScreen());
   }
 }

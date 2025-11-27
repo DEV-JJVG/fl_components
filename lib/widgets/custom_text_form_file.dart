@@ -32,19 +32,13 @@ class CustomTextFormFile extends StatelessWidget {
             }
           },
           autovalidateMode: AutovalidateMode.onUserInteraction,
-          decoration: const InputDecoration(
-            hintText: 'Nombre y apellidos',
-            labelText: 'Nombre y apellidos',
-            helperText: 'Solo letras',
-            prefixIcon: Icon(Icons.verified_user_outlined),
-            icon: Icon(Icons.assignment_ind_rounded),
-            suffixIcon: Icon(Icons.supervised_user_circle),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(10),
-                topRight: Radius.circular(10),
-              ),
-            ),
+          decoration: InputDecoration(
+            hintText: hintText,
+            labelText: labelText,
+            helperText: helperText,
+            //prefixIcon: const Icon(Icons.verified_user_outlined),
+            icon: Icon(icon),
+            suffixIcon: Icon(suffixIcon),
           ),
         ),
       ),

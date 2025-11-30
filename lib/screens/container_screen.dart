@@ -1,38 +1,49 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class ContainerScreen extends StatefulWidget {
   const ContainerScreen({Key? key}) : super(key: key);
+
   @override
-  State<ContainerScreen> createState() => _ContainerSreenState();
+  State<ContainerScreen> createState() => _ContainerScreenState();
 }
 
-class _ContainerSreenState extends State<ContainerScreen> {
+class _ContainerScreenState extends State<ContainerScreen> {
+  final random = Random();
   double _width = 50;
   double _height = 50;
   Color _color = Colors.green;
-  BorderRadiusGeometry _borderRadius = BorderRadiusGeometry.circular(20);
+  BorderRadiusGeometry _borderRadius = BorderRadius.circular(10);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Dynamic Container')),
+      appBar: AppBar(title: Text('Dynamic Container')),
       body: Center(
         child: Container(
-          width: _height,
-          height: _width,
+          width: _width,
+          height: _height,
           decoration: BoxDecoration(borderRadius: _borderRadius, color: _color),
         ),
       ),
+
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.play_circle_fill_rounded),
 
         onPressed: () {
-          _width = Random().nextInt(300).toDouble() + 50;
-          _height = Random().nextInt(300).toDouble() + 50;
-          _color = Colors.yellow;
-          _borderRadius = BorderRadiusGeometry.circular(30);
+          //con esto hago que cuando le de al boton se cambie a esa altura
+          //_width = 200;
+          //_height = 200;
+          //altura aleatoria; tamaño aleatorio; color aleatorio y border aleatorio
+          _width = random.nextInt(200).toDouble() + 77;
+          _height = random.nextInt(200).toDouble() + 77;
+          _borderRadius = BorderRadius.circular((random.nextInt(200) + 77));
+          _color = Color.fromRGBO(
+            Random().nextInt(500) + 77,
+            Random().nextInt(500) + 77,
+            Random().nextInt(500) + 77,
+            Random().nextInt(500).toDouble() + 77,
+          );
           setState(() {});
         },
       ),

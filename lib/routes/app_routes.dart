@@ -1,5 +1,6 @@
 import 'package:fl_components/models/models.dart';
 import 'package:fl_components/screens/screens.dart';
+import 'package:fl_components/screens/slider_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -53,6 +54,12 @@ class AppRoutes {
       icon: Icons.input_rounded,
       name: 'Forms: Inputs',
       screen: const InputsScreen(),
+    ),
+    MenuOption(
+      route: 'slider',
+      icon: Icons.slideshow_rounded,
+      name: 'Slider & Checks',
+      screen: const SliderScreen(),
     ),
   ];
 

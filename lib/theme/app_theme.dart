@@ -57,5 +57,10 @@ class AppTheme {
         ),
       ),
     ),
+    sliderTheme: SliderThemeData(
+      thumbColor: primary,
+      activeTrackColor: primary,
+      inactiveTrackColor: primary.withOpacity(0.5),
+    ),
   );
 }

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:fl_components/routes/app_routes.dart';
 import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {PointerDeviceKind.mouse, PointerDeviceKind.touch},
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       initialRoute: AppRoutes.initialRoute,
